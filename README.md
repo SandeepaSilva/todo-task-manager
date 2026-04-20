@@ -1,84 +1,26 @@
-# To-Do Task Manager
+# Full-Stack To-Do Application
 
-A simple and responsive task management web application that allows users to create, update, and manage daily tasks efficiently.
+This is a beginner-friendly full-stack application built with Node.js, Express, and MongoDB.
 
-## 🚀 Features
+## Requirements
+* [Node.js](https://nodejs.org/en/) installed on your computer.
+* [MongoDB Community Server](https://www.mongodb.com/try/download/community) installed and running locally on standard port (`27017`).
 
-* Add new tasks
-* Mark tasks as completed
-* Delete tasks
-* Filter tasks (All / Pending / Completed)
-* Responsive user interface
+## How to Run Locally
 
-## 🛠️ Technologies Used
+1. Open a terminal and navigate to this specific folder (`todo-fullstack`).
+2. Make sure you install the necessary packages (`express`, `mongoose`):
+   ```bash
+   npm install
+   ```
+3. Start the application backend server:
+   ```bash
+   npm start
+   ```
+4. Open your web browser and go to your locally hosted frontend:
+   [http://localhost:3000](http://localhost:3000)
 
-* HTML
-* CSS
-* JavaScript
-* Node.js (Backend)
-* MongoDB (Database)
-
-## 📂 Project Structure
-
-```
-todo-task-manager/
-│── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-│── backend/
-│   ├── server.js
-│   └── routes/
-│
-│── README.md
-```
-
-## ⚙️ How to Run the Project
-
-### 1. Clone the repository
-
-```
-git clone https://github.com/YOUR-USERNAME/todo-task-manager.git
-```
-
-### 2. Navigate to project folder
-
-```
-cd todo-task-manager
-```
-
-### 3. Install dependencies (for backend)
-
-```
-npm install
-```
-
-### 4. Run the server
-
-```
-node server.js
-```
-
-### 5. Open in browser
-
-Open `index.html` or visit:
-
-```
-http://localhost:3000
-```
-
-## 📌 Status
-
-This project is currently in progress, with core features implemented and additional improvements planned.
-
-## 🔗 Links
-
-* GitHub Repository: https://github.com/SandeepaSilva/todo-task-manager
-
-## 👨‍💻 Author
-
-Sandeepa Silva
-Computer Science Undergraduate
-
----
+## Code Architecture (Good for Interviews)
+1. **Frontend**: Located in `/public`. Uses vanilla JavaScript with `fetch()` to call the API endpoints. No frameworks used.
+2. **Backend**: Located in `server.js`. Uses Express to serve the frontend folder as static files and implements standard REST API routes for CRUD operations (`GET`, `POST`, `PUT`, `DELETE`).
+3. **Database**: Managed by Mongoose in `models/Task.js`. Connects to a local MongoDB instance.
